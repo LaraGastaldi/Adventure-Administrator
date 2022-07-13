@@ -19,7 +19,7 @@ public class Cena {
             joinColumns = @JoinColumn(name = "id_cena"),
             inverseJoinColumns = @JoinColumn(name = "id_personagem")
     )
-    private List<Cena> personagens;
+    private List<Personagem> personagens;
 
     public Cena() {
 
@@ -43,5 +43,9 @@ public class Cena {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public void associateUsers(Personagem personagem) {
+        this.personagens.add(personagem);
     }
 }

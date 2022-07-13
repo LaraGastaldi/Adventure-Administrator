@@ -61,4 +61,8 @@ public class Personagem {
     public List<Item> getItens() {
         return itens;
     }
+
+    public void associateCena(Cena cena) {
+        this.cenas.add(cena);
+    }
 }
